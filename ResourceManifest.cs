@@ -23,6 +23,8 @@ namespace Rimango.BootstrapValidation
             manifest.DefineScript("Rimango.BootstrapValidator.EN")
                 .SetUrl("BootstrapValidator/language/en_EN.js")
                 .SetDependencies("Rimango.BootstrapValidator");
+
+            manifest.DefineScript("Rimango.BootstrapValidator.ValidateForm").SetUrl("ValidateForm.js").SetDependencies("Rimango.BootstrapValidator");
         }
     }
 }

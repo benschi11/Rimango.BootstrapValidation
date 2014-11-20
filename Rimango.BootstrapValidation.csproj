@@ -98,6 +98,7 @@
     <Content Include="Scripts\BootstrapValidator\language\vi_VN.js" />
     <Content Include="Scripts\BootstrapValidator\language\zh_CN.js" />
     <Content Include="Scripts\BootstrapValidator\language\zh_TW.js" />
+    <Content Include="Scripts\ValidateForm.js" />
     <Content Include="Styles\BootstrapValidator\bootstrapValidator.css" />
     <Content Include="Styles\BootstrapValidator\bootstrapValidator.min.css" />
     <Content Include="Web.config" />
