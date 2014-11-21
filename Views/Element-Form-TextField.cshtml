@@ -1,0 +1,45 @@
+﻿@using Orchard.DisplayManagement.Shapes
+@using Orchard.DynamicForms.Elements
+@using Orchard.Layouts.Helpers
+@using Orchard.Layouts.Settings
+@{
+    var element = (TextField)Model.Element;
+    var commonSettings = element.State.GetModel<CommonElementSettings>();
+    var tagBuilder = (OrchardTagBuilder)TagBuilderExtensions.AddCommonElementAttributes(new OrchardTagBuilder("input"), Model);
+
+    tagBuilder.AddCssClass("text");
+    tagBuilder.Attributes["type"] = "text";
+    tagBuilder.Attributes["value"] = Model.TokenizedValue;
+    tagBuilder.Attributes["name"] = element.Name;
+    tagBuilder.AddClientValidationAttributes((IDictionary<string, string>)Model.ClientValidationAttributes);
+
+    if (!ViewData.ModelState.IsValidField(element.Name))
+    {
+        tagBuilder.AddCssClass("input-validation-error");
+    }
+
+    // Bootstrap Client Validation
+    Style.Require("Rimango.BootstrapValidator");
+    Script.Require("Rimango.BootstrapValidator.DE").AtFoot();
+    Script.Require("Rimango.BootstrapValidator.ValidateForm").AtFoot();
+    tagBuilder.AddCssClass("form-control");
+
+    //TODO: HACK Every Element is required
+    tagBuilder.Attributes["data-bv-notempty"] = "true";
+
+
+}
+
+<div class="form-group">
+    @if (element.ShowLabel)
+    {
+        <label for="@commonSettings.Id">@element.Label</label>
+    }
+    <div class="editor-field">
+        @Html.Raw(tagBuilder.ToString(TagRenderMode.SelfClosing))
+    </div>
+    @if (element.ValidationSettings.ShowValidationMessage == true)
+    {
+        @Html.ValidationMessage(element.Name)
+    }
+</div>
