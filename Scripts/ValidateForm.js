@@ -1,6 +1,6 @@
-﻿$(document).ready(function() {
+﻿$(document).ready(function () {
     $('form')
-        .on('init.field.bv', function(e, data) {
+        .on('init.field.bv', function (e, data) {
 
             var $parent = data.element.parents('.form-group'),
                 $icon = $parent.find('.form-control-feedback[data-bv-icon-for="' + data.field + '"]'),
@@ -12,11 +12,11 @@
             }
         })
         .bootstrapValidator({
-        feedbackIcons: {
-            required: 'glyphicon glyphicon-asterisk',
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        }
-    });
+            feedbackIcons: {
+                required: 'glyphicon glyphicon-asterisk',
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            }
+        });
 });
