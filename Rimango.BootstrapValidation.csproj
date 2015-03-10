@@ -65,44 +65,61 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\BootstrapValidator\bootstrapValidator.js" />
-    <Content Include="Scripts\BootstrapValidator\bootstrapValidator.min.js" />
-    <Content Include="Scripts\BootstrapValidator\language\ar_MA.js" />
-    <Content Include="Scripts\BootstrapValidator\language\be_FR.js" />
-    <Content Include="Scripts\BootstrapValidator\language\be_NL.js" />
-    <Content Include="Scripts\BootstrapValidator\language\bg_BG.js" />
-    <Content Include="Scripts\BootstrapValidator\language\cs_CZ.js" />
-    <Content Include="Scripts\BootstrapValidator\language\da_DK.js" />
-    <Content Include="Scripts\BootstrapValidator\language\de_DE.js" />
-    <Content Include="Scripts\BootstrapValidator\language\en_US.js" />
-    <Content Include="Scripts\BootstrapValidator\language\es_CL.js" />
-    <Content Include="Scripts\BootstrapValidator\language\es_ES.js" />
-    <Content Include="Scripts\BootstrapValidator\language\fa_IR.js" />
-    <Content Include="Scripts\BootstrapValidator\language\fr_FR.js" />
-    <Content Include="Scripts\BootstrapValidator\language\gr_EL.js" />
-    <Content Include="Scripts\BootstrapValidator\language\hu_HU.js" />
-    <Content Include="Scripts\BootstrapValidator\language\id_ID.js" />
-    <Content Include="Scripts\BootstrapValidator\language\it_IT.js" />
-    <Content Include="Scripts\BootstrapValidator\language\ja_JP.js" />
-    <Content Include="Scripts\BootstrapValidator\language\nl_NL.js" />
-    <Content Include="Scripts\BootstrapValidator\language\no_NO.js" />
-    <Content Include="Scripts\BootstrapValidator\language\pl_PL.js" />
-    <Content Include="Scripts\BootstrapValidator\language\pt_BR.js" />
-    <Content Include="Scripts\BootstrapValidator\language\ro_RO.js" />
-    <Content Include="Scripts\BootstrapValidator\language\ru_RU.js" />
-    <Content Include="Scripts\BootstrapValidator\language\sr_RS.js" />
-    <Content Include="Scripts\BootstrapValidator\language\sv_SE.js" />
-    <Content Include="Scripts\BootstrapValidator\language\th_TH.js" />
-    <Content Include="Scripts\BootstrapValidator\language\tr_TR.js" />
-    <Content Include="Scripts\BootstrapValidator\language\ua_UA.js" />
-    <Content Include="Scripts\BootstrapValidator\language\vi_VN.js" />
-    <Content Include="Scripts\BootstrapValidator\language\zh_CN.js" />
-    <Content Include="Scripts\BootstrapValidator\language\zh_TW.js" />
-    <Content Include="Scripts\ValidateForm.js" />
-    <Content Include="Styles\BootstrapValidator\bootstrapValidator.css" />
-    <Content Include="Styles\BootstrapValidator\bootstrapValidator.min.css" />
+    <Content Include="Scripts\formValidation.js" />
+    <Content Include="Scripts\formValidation.min.js" />
+    <Content Include="Scripts\framework\bootstrap.js" />
+    <Content Include="Scripts\framework\bootstrap.min.js" />
+    <Content Include="Scripts\framework\foundation.js" />
+    <Content Include="Scripts\framework\foundation.min.js" />
+    <Content Include="Scripts\framework\pure.js" />
+    <Content Include="Scripts\framework\pure.min.js" />
+    <Content Include="Scripts\framework\semantic.js" />
+    <Content Include="Scripts\framework\semantic.min.js" />
+    <Content Include="Scripts\framework\uikit.js" />
+    <Content Include="Scripts\framework\uikit.min.js" />
+    <Content Include="Scripts\language\ar_MA.js" />
+    <Content Include="Scripts\language\be_FR.js" />
+    <Content Include="Scripts\language\be_NL.js" />
+    <Content Include="Scripts\language\bg_BG.js" />
+    <Content Include="Scripts\language\ca_ES.js" />
+    <Content Include="Scripts\language\cs_CZ.js" />
+    <Content Include="Scripts\language\da_DK.js" />
+    <Content Include="Scripts\language\de_DE.js" />
+    <Content Include="Scripts\language\en_US.js" />
+    <Content Include="Scripts\language\es_CL.js" />
+    <Content Include="Scripts\language\es_ES.js" />
+    <Content Include="Scripts\language\eu_ES.js" />
+    <Content Include="Scripts\language\fa_IR.js" />
+    <Content Include="Scripts\language\fi_FI.js" />
+    <Content Include="Scripts\language\fr_FR.js" />
+    <Content Include="Scripts\language\gr_EL.js" />
+    <Content Include="Scripts\language\he_IL.js" />
+    <Content Include="Scripts\language\hi_IN.js" />
+    <Content Include="Scripts\language\hu_HU.js" />
+    <Content Include="Scripts\language\id_ID.js" />
+    <Content Include="Scripts\language\it_IT.js" />
+    <Content Include="Scripts\language\ja_JP.js" />
+    <Content Include="Scripts\language\nl_NL.js" />
+    <Content Include="Scripts\language\no_NO.js" />
+    <Content Include="Scripts\language\pl_PL.js" />
+    <Content Include="Scripts\language\pt_BR.js" />
+    <Content Include="Scripts\language\pt_PT.js" />
+    <Content Include="Scripts\language\ro_RO.js" />
+    <Content Include="Scripts\language\ru_RU.js" />
+    <Content Include="Scripts\language\sk_SK.js" />
+    <Content Include="Scripts\language\sq_AL.js" />
+    <Content Include="Scripts\language\sr_RS.js" />
+    <Content Include="Scripts\language\sv_SE.js" />
+    <Content Include="Scripts\language\th_TH.js" />
+    <Content Include="Scripts\language\tr_TR.js" />
+    <Content Include="Scripts\language\ua_UA.js" />
+    <Content Include="Scripts\language\vi_VN.js" />
+    <Content Include="Scripts\language\zh_CN.js" />
+    <Content Include="Scripts\language\zh_TW.js" />
+    <Content Include="Scripts\validateForm.js" />
+    <Content Include="Styles\formValidation.css" />
+    <Content Include="Styles\formValidation.min.css" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
@@ -115,6 +132,14 @@
     <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.DynamicForms\Orchard.DynamicForms.csproj">
+      <Project>{82190F52-2901-46D6-8A4C-34649959483F}</Project>
+      <Name>Orchard.DynamicForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Layouts\Orchard.Layouts.csproj">
+      <Project>{6bd8b2fa-f2e3-4ac8-a4c3-2925a653889a}</Project>
+      <Name>Orchard.Layouts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Orchard.Users\Orchard.Users.csproj">
       <Project>{79aed36e-abd0-4747-93d3-8722b042454b}</Project>
@@ -131,9 +156,9 @@
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\BootstrapValidator\bootstrapValidator.min.js.map">
-      <DependentUpon>bootstrapValidator.min.js</DependentUpon>
-    </Content>
+    <Content Include="Views\Element-Form-EmailField.cshtml" />
+    <Content Include="Views\Element-Form-TextArea.cshtml" />
+    <Content Include="Views\Element-Form-TextField.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

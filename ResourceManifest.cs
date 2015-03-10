@@ -16,8 +16,8 @@ namespace Rimango.BootstrapValidation
             manifest.DefineStyle("Rimango.BootstrapValidator").SetUrl("formValidation.min.css");
 
 
-            manifest.DefineScript("Rimango.BootstrapValidator").SetUrl("framework/bootstrap.min.js").SetDependencies("Rimango.FormValidation");
             manifest.DefineScript("Rimango.FormValidation").SetUrl("formValidation.min.js").SetDependencies("jQuery");
+            manifest.DefineScript("Rimango.BootstrapValidator").SetUrl("framework/bootstrap.min.js").SetDependencies("Rimango.FormValidation");
             manifest.DefineScript("Rimango.BootstrapValidator.DE")
                 .SetUrl("language/de_DE.js")
                 .SetDependencies("Rimango.BootstrapValidator");
